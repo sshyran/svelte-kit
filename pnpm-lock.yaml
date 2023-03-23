@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@changesets/cli': ^2.22.0
       '@rollup/plugin-commonjs': ^22.0.1
-      '@rollup/plugin-json': ^4.1.0
+      '@rollup/plugin-json': ^6.0.0
       '@rollup/plugin-node-resolve': ^14.1.0
       '@svitejs/changesets-changelog-github-compact': ^0.1.1
       playwright: ^1.25.0
@@ -19,7 +19,7 @@ importers:
     devDependencies:
       '@changesets/cli': 2.23.0
       '@rollup/plugin-commonjs': 22.0.1_rollup@2.78.1
-      '@rollup/plugin-json': 4.1.0_rollup@2.78.1
+      '@rollup/plugin-json': 6.0.0_rollup@2.78.1
       '@rollup/plugin-node-resolve': 14.1.0_rollup@2.78.1
       '@svitejs/changesets-changelog-github-compact': 0.1.1
       playwright: 1.25.0
@@ -84,7 +84,7 @@ importers:
       '@iarna/toml': ^2.2.5
       '@netlify/functions': ^1.0.0
       '@rollup/plugin-commonjs': ^22.0.1
-      '@rollup/plugin-json': ^4.1.0
+      '@rollup/plugin-json': ^6.0.0
       '@rollup/plugin-node-resolve': ^14.1.0
       '@sveltejs/kit': workspace:*
       '@types/node': ^16.11.36
@@ -102,7 +102,7 @@ importers:
     devDependencies:
       '@netlify/functions': 1.0.0
       '@rollup/plugin-commonjs': 22.0.1_rollup@2.78.1
-      '@rollup/plugin-json': 4.1.0_rollup@2.78.1
+      '@rollup/plugin-json': 6.0.0_rollup@2.78.1
       '@rollup/plugin-node-resolve': 14.1.0_rollup@2.78.1
       '@sveltejs/kit': link:../kit
       '@types/node': 16.11.42
@@ -114,7 +114,7 @@ importers:
 
   packages/adapter-node:
     specifiers:
-      '@rollup/plugin-json': ^4.1.0
+      '@rollup/plugin-json': ^6.0.0
       '@sveltejs/kit': workspace:*
       '@types/node': ^16.11.36
       c8: ^7.11.3
@@ -129,7 +129,7 @@ importers:
     dependencies:
       esbuild: 0.15.7
     devDependencies:
-      '@rollup/plugin-json': 4.1.0_rollup@2.78.1
+      '@rollup/plugin-json': 6.0.0_rollup@2.78.1
       '@sveltejs/kit': link:../kit
       '@types/node': 16.11.42
       c8: 7.11.3
@@ -295,8 +295,8 @@ importers:
       uvu: ^0.5.3
       vite: ^3.1.1
     dependencies:
-      '@types/cookie': 0.5.1
       '@sveltejs/vite-plugin-svelte': 1.0.5_svelte@3.48.0+vite@3.1.1
+      '@types/cookie': 0.5.1
       cookie: 0.5.0
       devalue: 3.1.2
       kleur: 4.1.5
@@ -1089,12 +1089,16 @@ packages:
       rollup: 2.78.1
     dev: true
 
-  /@rollup/plugin-json/4.1.0_rollup@2.78.1:
-    resolution: {integrity: sha512-yfLbTdNS6amI/2OpmbiBoW12vngr5NW2jCJVZSBEz+H5KfUJZ2M7sDjk0U6GOOdCWFVScShte29o9NezJ53TPw==}
+  /@rollup/plugin-json/6.0.0_rollup@2.78.1:
+    resolution: {integrity: sha512-i/4C5Jrdr1XUarRhVu27EEwjt4GObltD7c+MkCIpO2QIbojw8MUs+CCTqOphQi3Qtg1FLmYt+l+6YeoIf51J7w==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^1.20.0 || ^2.0.0
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.78.1
+      '@rollup/pluginutils': 5.0.2_rollup@2.78.1
       rollup: 2.78.1
     dev: true
 
@@ -1131,6 +1135,21 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
+
+  /@rollup/pluginutils/5.0.2_rollup@2.78.1:
+    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.0
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+      rollup: 2.78.1
+    dev: true
 
   /@sveltejs/site-kit/2.1.2:
     resolution: {integrity: sha512-VB5JhdvO1299lgR0ZU1MUdKNPb0TZMq4ck8cxg7p/o3TXFTLwbgwF/aV4ei9I/p11bpWFh9FKGzGUUGxWgJxSg==}
@@ -1185,8 +1204,8 @@ packages:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
     dev: true
 
-  /@types/estree/0.0.52:
-    resolution: {integrity: sha512-BZWrtCU0bMVAIliIV+HJO1f1PR41M7NKjfxrFJwwhKI1KwhwOxYw1SXg9ao+CIMt774nFuGiG6eU+udtbEI9oQ==}
+  /@types/estree/1.0.0:
+    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
   /@types/gitignore-parser/0.0.0:
@@ -2712,7 +2731,7 @@ packages:
   /is-reference/1.2.1:
     resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
     dependencies:
-      '@types/estree': 0.0.52
+      '@types/estree': 1.0.0
     dev: true
 
   /is-regex/1.1.4:
