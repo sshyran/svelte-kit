@@ -15,7 +15,7 @@
 		"cookie": "^0.5.0",
 		"devalue": "^3.1.2",
 		"kleur": "^4.1.4",
-		"magic-string": "^0.26.2",
+		"magic-string": "^0.30.0",
 		"mime": "^3.0.0",
 		"node-fetch": "^3.2.4",
 		"sade": "^1.8.1",
